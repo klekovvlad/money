@@ -53,8 +53,6 @@ let p = 0;
 
 const tariff = document.querySelector('.tariff');
 let tariffPos = tariff.offsetTop;
-let tariffHeight = tarigg.offsetHeight;
-let tariffRes = tariffHeight - tariffPos;
 
 function Animate() {
     const stepItem = document.querySelectorAll('.step');
@@ -103,3 +101,11 @@ function personAnimate(num, elem) {
     p = 1;
 };
 
+// let now = new Date();
+// const dateItem = document.querySelector('.today');
+// const options = {
+//     month: 'long',
+//     day: 'numeric',
+//   };
+
+// dateItem.innerHTML = now.toLocaleString("ru", options);

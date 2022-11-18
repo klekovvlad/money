@@ -47,6 +47,8 @@ a {
   cursor: pointer;
   transition: 0.5s;
   position: relative;
+  max-width: 300px;
+  margin: 0px auto;
 }
 .main-btn:before {
   content: '';
@@ -125,10 +127,10 @@ span.bold {
   animation: logoAnimate 1s 0.5s linear forwards;
 }
 .header__nav {
-  flex: 0 1 50%;
+  flex: 0 1 60%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .header__nav a {
   color: #fff;
@@ -139,7 +141,8 @@ span.bold {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex: 0 1 30%;
+  flex: 0 1 20%;
+  margin-left: auto;
 }
 .header__buttons a.phone {
   background: #fff;
@@ -336,6 +339,13 @@ span.bold {
   opacity: 1;
   transform: translateY(0px);
 }
+.steps__btn {
+  padding: 50px 0px;
+}
+.steps__btn .main-btn {
+  max-width: 300px;
+  margin: 0px auto;
+}
 .feedback__top {
   min-height: 500px;
   background: url(../img/worldbg.png) no-repeat top center;
@@ -461,6 +471,9 @@ span.bold {
 .tariff__item-center {
   padding: 70px 50px;
   position: relative;
+  transition: 0.5s all linear;
+  opacity: 0;
+  transform: translateY(50px);
 }
 .tariff__item-center .tape {
   position: absolute;
@@ -482,6 +495,10 @@ span.bold {
   position: absolute;
   top: 0;
   right: 20px;
+}
+.tariff__item-show {
+  opacity: 1;
+  transform: translateY(0px);
 }
 .faq {
   padding: 100px 0px 70px 0px;
@@ -609,10 +626,10 @@ span.bold {
     font-size: 1.2em;
   }
   .header__nav {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
   }
   .header__nav a {
-    font-size: 1em;
+    font-size: 0.875em;
   }
   .header__buttons a.phone {
     font-size: 0em;
@@ -624,6 +641,17 @@ span.bold {
     height: 20px;
     right: 50%;
     transform: translateY(-50%) translateX(50%);
+  }
+  @keyframes phoneAnimate {
+    0% {
+      transform: translateX(50%) translateY(-50%) rotate(10deg);
+    }
+    50% {
+      transform: translateX(50%) translateY(-50%) rotate(-10deg);
+    }
+    100% {
+      transform: translateX(50%) translateY(-50%) rotate(0deg);
+    }
   }
   .main__wrapper {
     min-height: 820px;
@@ -671,6 +699,9 @@ span.bold {
     grid-template-rows: auto;
     grid-gap: 30px;
   }
+  .tariff__item {
+    padding: 70px 30px;
+  }
   .tariff__item-center {
     grid-column-start: span 2;
     max-width: 50%;
@@ -706,7 +737,7 @@ span.bold {
     font-size: 14px;
   }
   .header__logo {
-    flex: 0 1 45%;
+    flex: 0 1 70%;
   }
   .header__logo h4 {
     font-size: 1em;
@@ -720,7 +751,8 @@ span.bold {
     display: none;
   }
   .header__buttons {
-    flex: 0 1 55%;
+    flex: 0 1 30%;
+    justify-content: flex-end;
   }
   .header__buttons a.phone {
     padding: 0;
@@ -809,7 +841,7 @@ span.bold {
   }
   .feedback__top h3 {
     font-size: 1.7em;
-    max-width: 80%;
+    max-width: 250px;
     top: 20px;
   }
   .feedback__bottom {
@@ -885,13 +917,13 @@ span.bold {
     right: 20px;
   }
   .faq__close span {
-    width: 20px;
+    width: 16px;
   }
   .faq__close span:nth-child(1) {
-    transform: translateY(4.8px) rotate(-45deg);
+    transform: translateY(5px) rotate(-45deg);
   }
   .faq__close span:nth-child(2) {
-    transform: translateY(-4.8px) rotate(45deg);
+    transform: translateY(-5px) rotate(45deg);
   }
   .faq__answer {
     font-size: 0.875em;

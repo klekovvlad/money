@@ -52,6 +52,8 @@ a {
     cursor: pointer;
     transition: 0.5s;
     position: relative;
+    max-width: 300px;
+    margin: 0px auto;
 }
 .main-btn:before {
     content: '';
@@ -128,10 +130,10 @@ span.bold {
         }
     }
     &__nav {
-        flex: 0 1 50%;
+        flex: 0 1 60%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         a {
             color: #fff;
             font-size: 1.125em;
@@ -142,7 +144,8 @@ span.bold {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        flex: 0 1 30%;
+        flex: 0 1 20%;
+        margin-left: auto;
         a.phone {
             background: #fff;
             font-size: 1.25em;
@@ -352,6 +355,13 @@ span.bold {
         opacity: 1.0;
         transform: translateY(0px);
     }
+    &__btn {
+        padding: 50px 0px;
+        .main-btn {
+            max-width: 300px;
+            margin: 0px auto;
+        }
+    }
 }
 
 .feedback {
@@ -480,6 +490,9 @@ span.bold {
         &-center {
             padding: 70px 50px;
             position: relative;
+            transition: 0.5s all linear;
+            opacity: 0;
+            transform: translateY(50px);
             .tape {
                 position: absolute;
                 font-size: 10px;
@@ -500,6 +513,10 @@ span.bold {
             position: absolute;
             top: 0;
             right: 20px;
+        }
+        &-show {
+            opacity: 1.0;
+            transform: translateY(0px);
         }
     }
 }
@@ -637,9 +654,9 @@ span.bold {
             }
         }
         &__nav {
-            flex: 0 0 50%;
+            flex: 0 0 40%;
             a {
-                font-size: 1em;
+                font-size: 0.875em;
             }
         }
         &__buttons {
@@ -656,7 +673,17 @@ span.bold {
             }
         }
     }
-
+    @keyframes phoneAnimate {
+        0% {
+            transform: translateX(50%) translateY(-50%) rotate(10deg);
+        }
+        50% {
+            transform: translateX(50%) translateY(-50%) rotate(-10deg);
+        }
+        100% {
+            transform: translateX(50%) translateY(-50%) rotate(0deg);
+        }
+    }
     .main {
         &__wrapper {
             min-height: 820px;
@@ -721,6 +748,7 @@ span.bold {
             grid-gap: 30px;
         }
         &__item {
+            padding: 70px 30px;
             &-center {
                 grid-column-start: span 2;
                 max-width: 50%;
@@ -760,7 +788,7 @@ span.bold {
     
     .header {
         &__logo {
-            flex: 0 1 45%;
+            flex: 0 1 70%;
             h4 {
                 font-size: 1em;
                 span {
@@ -774,7 +802,8 @@ span.bold {
             display: none;
         }
         &__buttons {
-            flex: 0 1 55%;
+            flex: 0 1 30%;
+            justify-content: flex-end;
             a.phone {
                 padding: 0;
                 height: 40px;
@@ -872,7 +901,7 @@ span.bold {
             background-size: 600px;
             h3 {
                 font-size: 1.7em;
-                max-width: 80%;
+                max-width: 250px;
                 top: 20px;
             }
         }
@@ -950,13 +979,13 @@ span.bold {
             height: 30px;
             right: 20px;
             span {
-                width: 20px;
+                width: 16px;
             }
             span:nth-child(1) {
-                transform: translateY(4.8px) rotate(-45deg);
+                transform: translateY(5px) rotate(-45deg);
             }
             span:nth-child(2) {
-                transform: translateY(-4.8px) rotate(45deg);
+                transform: translateY(-5px) rotate(45deg);
             }
         }
         &__answer {
