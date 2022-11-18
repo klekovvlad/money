@@ -917,7 +917,7 @@ span.bold {
     right: 20px;
   }
   .faq__close span {
-    width: 18px;
+    width: 22px;
   }
   .faq__close span:nth-child(1) {
     transform: translateY(7px) rotate(-45deg);
