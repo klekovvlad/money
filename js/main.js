@@ -101,11 +101,17 @@ function personAnimate(num, elem) {
     p = 1;
 };
 
-// let now = new Date();
-// const dateItem = document.querySelector('.today');
-// const options = {
-//     month: 'long',
-//     day: 'numeric',
-//   };
-
-// dateItem.innerHTML = now.toLocaleString("ru", options);
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 3000,
+    },
+    speed: 800,
+    centeredSlides: true,
+    effect: 'fade',
+    navigation: {
+      nextEl: '.swiper-next',
+      prevEl: '.swiper-prev',
+    },
+  });
