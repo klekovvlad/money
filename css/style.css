@@ -16,14 +16,17 @@ a {
 @font-face {
   font-family: 'Manrope-Light';
   src: url(../fonts/Manrope-Light.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: 'Manrope-Regular';
   src: url(../fonts/Manrope-Regular.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: 'Manrope-Bold';
   src: url(../fonts/Manrope-Regular.ttf);
+  font-display: swap;
 }
 .container {
   max-width: 100%;
@@ -67,7 +70,7 @@ a {
 h3 {
   font-size: 2.8em;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 h4 {
   font-size: 1.25em;
@@ -76,7 +79,7 @@ h4 {
 }
 span.bold {
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: #5732C6;
 }
 .header {
@@ -98,7 +101,7 @@ span.bold {
 }
 .header__logo h4 {
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: #fff;
   font-size: 1.5em;
@@ -235,7 +238,7 @@ span.bold {
   font-size: 3.2em;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 .main__text h2 {
   color: #fff;
@@ -264,7 +267,7 @@ span.bold {
 .main__sale span.timer-min,
 .main__sale span.timer-sec {
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   width: 50px;
 }
 .main__sale-button {
@@ -323,7 +326,7 @@ span.bold {
   font-size: 1.75em;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 .steps .step-text span.small {
   font-family: 'Manrope-Light', sans-serif;
@@ -348,7 +351,7 @@ span.bold {
   text-align: center;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   top: 60px;
 }
@@ -408,7 +411,7 @@ span.bold {
   text-align: center;
   font-size: 1.125em;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 .tariff {
   padding: 100px 0px;
@@ -437,7 +440,7 @@ span.bold {
   text-transform: uppercase;
   font-size: 1.75em;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 .tariff__item span.price {
   font-size: 2.5em;
@@ -464,7 +467,7 @@ span.bold {
   color: #fff;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   top: 25px;
   right: 10px;
   transform: rotate(90deg);
@@ -589,7 +592,7 @@ span.bold {
   h3 {
     font-size: 2.8em;
     font-family: 'Manrope-Bold', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
   }
   h4 {
     font-size: 1.25em;
@@ -598,7 +601,7 @@ span.bold {
   }
   span.bold {
     font-family: 'Manrope-Bold', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: #5732C6;
   }
   .header__logo h4 {
@@ -838,6 +841,9 @@ span.bold {
   }
   .tariff__item {
     padding: 50px 30px;
+    transform: translateX(90%) translateY(10%) rotate(45deg);
+    opacity: 0;
+    transition: 0.5s;
   }
   .tariff__item h5 {
     font-size: 1.25em;
@@ -856,6 +862,10 @@ span.bold {
   }
   .tariff__item:last-child {
     grid-row-start: 3;
+  }
+  .tariff__item-show {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotate(0);
   }
   .faq {
     padding: 0px 0px 80px 0px;

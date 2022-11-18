@@ -16,19 +16,22 @@ a {
 @font-face {
     font-family: 'Manrope-Light';
     src: url(../fonts/Manrope-Light.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: 'Manrope-Regular';
     src: url(../fonts/Manrope-Regular.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: 'Manrope-Bold';
     src: url(../fonts/Manrope-Regular.ttf);
+    font-display: swap;
 }
 
 .light() {font-family: 'Manrope-Light', sans-serif;}
 .regular() {font-family: 'Manrope-Regular', sans-serif;}
-.bold() {font-family: 'Manrope-Bold', sans-serif; font-weight: 500;}
+.bold() {font-family: 'Manrope-Bold', sans-serif; font-weight: 600;}
 
 .container {
     max-width: 100%;
@@ -903,6 +906,9 @@ span.bold {
         }
         &__item {
             padding: 50px 30px;
+            transform: translateX(90%) translateY(10%) rotate(45deg);
+            opacity: 0;
+            transition: 0.5s;
             h5 {
                 font-size: 1.25em;
             }
@@ -921,6 +927,10 @@ span.bold {
         }
         &__item:last-child {
             grid-row-start: 3;
+        }
+        &__item-show {
+            opacity: 1.0;
+            transform: translateX(0) translateY(0) rotate(0);
         }
     }
     

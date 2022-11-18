@@ -48,9 +48,11 @@ const stepsBlock = document.querySelector('.steps');
 
 let stepsBlockPos = stepsBlock.offsetTop;
 let stepsBlockHeight = stepsBlock.offsetHeight;
-
 let stepsBlockRes = stepsBlockHeight - stepsBlockPos;
 let p = 0;
+
+const tariff = document.querySelector('.tariff');
+let tariffPos = tariff.offsetTop;
 
 function Animate() {
     const stepItem = document.querySelectorAll('.step');
@@ -68,6 +70,17 @@ function Animate() {
     let personPos = feedback.offsetTop;
     if(document.body.scrollTop > (personPos - 300) && p === 0 || document.documentElement.scrollTop > (personPos - 300) && p === 0) {
         personAnimate(1000, '.person');
+    };
+    const tariffItem = document.querySelectorAll('.tariff__item');
+    const tariffItemHeight = tariffItem[0].offsetHeight;
+    if(document.body.scrollTop > tariffPos - tariffItemHeight * 2 || document.documentElement.scrollTop > tariffPos - tariffItemHeight * 2) {
+        tariffItem[1].classList.add('tariff__item-show');
+    };
+    if(document.body.scrollTop > tariffPos - tariffItemHeight / 2 || document.documentElement.scrollTop > tariffPos - tariffItemHeight / 2) {
+        tariffItem[0].classList.add('tariff__item-show');
+    };
+    if(document.body.scrollTop > tariffPos || document.documentElement.scrollTop > tariffPos) {
+        tariffItem[2].classList.add('tariff__item-show');
     };
 }
 
@@ -87,3 +100,4 @@ function personAnimate(num, elem) {
     t);
     p = 1;
 };
+
