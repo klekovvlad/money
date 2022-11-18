@@ -920,10 +920,10 @@ span.bold {
     width: 20px;
   }
   .faq__close span:nth-child(1) {
-    transform: translateY(5px) rotate(-45deg);
+    transform: translateY(0px) rotate(-45deg);
   }
   .faq__close span:nth-child(2) {
-    transform: translateY(-5px) rotate(45deg);
+    transform: translateY(-0px) rotate(45deg);
   } 
   .faq__answer {
     font-size: 0.875em;
