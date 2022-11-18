@@ -23,7 +23,7 @@ a {
 }
 @font-face {
   font-family: 'Manrope-Bold';
-  src: url(../fonts/Manrope-SemiBold.ttf);
+  src: url(../fonts/Manrope-Regular.ttf);
 }
 .container {
   max-width: 100%;
@@ -67,6 +67,7 @@ a {
 h3 {
   font-size: 2.8em;
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
 }
 h4 {
   font-size: 1.25em;
@@ -75,6 +76,7 @@ h4 {
 }
 span.bold {
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
   color: #5732C6;
 }
 .header {
@@ -96,18 +98,28 @@ span.bold {
 }
 .header__logo h4 {
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   color: #fff;
   font-size: 1.5em;
   margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .header__logo h4 span {
-  color: #5732C6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #5732C6;
+  margin: 0;
   margin-left: 10px;
-  padding: 7px 20px;
-  background: #fff;
+  height: 40px;
+  width: 120px;
   border-radius: 30px;
   box-shadow: 2px 2px 10px rgba(30, 38, 109, 0.2), -2px -2px 10px rgba(30, 38, 109, 0.2);
+  animation: logoAnimate 1s 0.5s linear forwards;
 }
 .header__nav {
   flex: 0 1 50%;
@@ -150,6 +162,20 @@ span.bold {
 }
 .header__buttons a.phone:hover:before {
   animation: phoneAnimate 0.3s linear infinite;
+}
+@keyframes logoAnimate {
+  0% {
+    color: #fff;
+    background: #5732C6;
+  }
+  50% {
+    transform: scale(1, 0);
+  }
+  100% {
+    color: #5732C6;
+    background: #fff;
+    transform: scale(1, 1);
+  }
 }
 @keyframes phoneAnimate {
   0% {
@@ -209,6 +235,7 @@ span.bold {
   font-size: 3.2em;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
 }
 .main__text h2 {
   color: #fff;
@@ -237,6 +264,7 @@ span.bold {
 .main__sale span.timer-min,
 .main__sale span.timer-sec {
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
   width: 50px;
 }
 .main__sale-button {
@@ -295,6 +323,7 @@ span.bold {
   font-size: 1.75em;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
 }
 .steps .step-text span.small {
   font-family: 'Manrope-Light', sans-serif;
@@ -311,6 +340,7 @@ span.bold {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .feedback__top h3 {
   font-size: 2.7em;
@@ -318,11 +348,16 @@ span.bold {
   text-align: center;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
   position: relative;
   top: 60px;
 }
 .feedback__top h3 span {
   color: #5732C6;
+}
+.feedback__top h3 span.person {
+  display: inline-block;
+  min-width: 60px;
 }
 .feedback__bottom {
   background: url(../img/feedbackbg.png) no-repeat top center;
@@ -373,6 +408,7 @@ span.bold {
   text-align: center;
   font-size: 1.125em;
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
 }
 .tariff {
   padding: 100px 0px;
@@ -401,6 +437,7 @@ span.bold {
   text-transform: uppercase;
   font-size: 1.75em;
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
 }
 .tariff__item span.price {
   font-size: 2.5em;
@@ -427,6 +464,7 @@ span.bold {
   color: #fff;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
+  font-weight: 700;
   top: 25px;
   right: 10px;
   transform: rotate(90deg);
@@ -556,6 +594,7 @@ span.bold {
   h3 {
     font-size: 2.8em;
     font-family: 'Manrope-Bold', sans-serif;
+    font-weight: 700;
   }
   h4 {
     font-size: 1.25em;
@@ -564,6 +603,7 @@ span.bold {
   }
   span.bold {
     font-family: 'Manrope-Bold', sans-serif;
+    font-weight: 700;
     color: #5732C6;
   }
   .header__logo h4 {
@@ -673,7 +713,8 @@ span.bold {
     font-size: 1em;
   }
   .header__logo h4 span {
-    height: 50px;
+    height: 30px;
+    width: 80px;
     margin-left: 5px;
   }
   .header__nav {

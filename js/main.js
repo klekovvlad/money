@@ -30,7 +30,7 @@ function showHeader() {
 
 window.onscroll = function() {
     showHeader();
-    stepsAnimate();
+    Animate();
 };
 
 const question = document.querySelectorAll('.faq__question');
@@ -51,8 +51,9 @@ let stepsBlockPos = stepsBlock.offsetTop;
 let stepsBlockHeight = stepsBlock.offsetHeight;
 
 let stepsBlockRes = stepsBlockHeight - stepsBlockPos;
+let p = 0;
 
-function stepsAnimate() {
+function Animate() {
     const stepItem = document.querySelectorAll('.step');
     const stepItemHeight = stepItem[0].offsetHeight;
     if(document.body.scrollTop > stepsBlockRes || document.documentElement.scrollTop > stepsBlockRes) {
@@ -64,4 +65,26 @@ function stepsAnimate() {
     if(document.body.scrollTop > (stepsBlockRes + stepItemHeight*2)|| document.documentElement.scrollTop > (stepsBlockRes + stepItemHeight*2)) {
         stepItem[2].classList.add('step-aminate');
     };
+    let feedback = document.querySelector('.feedback');
+    let personPos = feedback.offsetTop;
+    if(document.body.scrollTop > (personPos - 300) && p === 0 || document.documentElement.scrollTop > (personPos - 300) && p === 0) {
+        personAnimate(1000, '.person');
+    };
 }
+
+function personAnimate(num, elem) {
+    const personTime = 3000;
+    const personStep = 50;
+    let e = document.querySelector('.person');
+    n = 0;
+    let t = Math.round(personTime/(num/personStep));
+    let interval = setInterval(() => {
+        n = n + personStep;
+        if(n == num) {
+            clearInterval(interval);
+        }
+        e.innerHTML = n;
+    }, 
+    t);
+    p = 1;
+};
