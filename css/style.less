@@ -23,7 +23,7 @@ a {
 }
 @font-face {
     font-family: 'Manrope-Bold';
-    src: url(../fonts/Manrope-Bold.ttf);
+    src: url(../fonts/Manrope-SemiBold.ttf);
 }
 
 .light() {font-family: 'Manrope-Light', sans-serif;}
@@ -289,6 +289,9 @@ span.bold {
         grid-gap: 50px;
     }
     .step {
+        transition: 0.5s all linear;
+        opacity: 0;
+        transform: translateY(50px);
         &-img {
             display: inline-block;
             border-radius: 50%;
@@ -317,6 +320,10 @@ span.bold {
                 margin-top: 10px;
             }
         }
+    }
+    .step-aminate {
+        opacity: 1.0;
+        transform: translateY(0px);
     }
 }
 
@@ -758,7 +765,17 @@ span.bold {
             }
         }
     }
-
+    @keyframes phoneAnimate {
+        0% {
+            transform: translateX(50%) translateY(-50%) rotate(10deg);
+        }
+        50% {
+            transform: translateX(50%) translateY(-50%) rotate(-10deg);
+        }
+        100% {
+            transform: translateX(50%) translateY(-50%) rotate(0deg);
+        }
+    }
     .main {
         background: url(../img/mainbg.png) no-repeat center;
         background-size: cover;

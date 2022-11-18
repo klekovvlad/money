@@ -30,6 +30,7 @@ function showHeader() {
 
 window.onscroll = function() {
     showHeader();
+    stepsAnimate();
 };
 
 const question = document.querySelectorAll('.faq__question');
@@ -43,3 +44,24 @@ question.forEach(function(questionItem, index) {
         questionClose[index].classList.toggle('faq__close-show');
     })
 });
+
+const stepsBlock = document.querySelector('.steps');
+
+let stepsBlockPos = stepsBlock.offsetTop;
+let stepsBlockHeight = stepsBlock.offsetHeight;
+
+let stepsBlockRes = stepsBlockHeight - stepsBlockPos;
+
+function stepsAnimate() {
+    const stepItem = document.querySelectorAll('.step');
+    const stepItemHeight = stepItem[0].offsetHeight;
+    if(document.body.scrollTop > stepsBlockRes || document.documentElement.scrollTop > stepsBlockRes) {
+        stepItem[0].classList.add('step-aminate');
+    };
+    if(document.body.scrollTop > (stepsBlockRes + stepItemHeight)|| document.documentElement.scrollTop > (stepsBlockRes + stepItemHeight)) {
+        stepItem[1].classList.add('step-aminate');
+    };
+    if(document.body.scrollTop > (stepsBlockRes + stepItemHeight*2)|| document.documentElement.scrollTop > (stepsBlockRes + stepItemHeight*2)) {
+        stepItem[2].classList.add('step-aminate');
+    };
+}

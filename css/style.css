@@ -23,7 +23,7 @@ a {
 }
 @font-face {
   font-family: 'Manrope-Bold';
-  src: url(../fonts/Manrope-Bold.ttf);
+  src: url(../fonts/Manrope-SemiBold.ttf);
 }
 .container {
   max-width: 100%;
@@ -270,6 +270,11 @@ span.bold {
   grid-template-rows: auto;
   grid-gap: 50px;
 }
+.steps .step {
+  transition: 0.5s all linear;
+  opacity: 0;
+  transform: translateY(50px);
+}
 .steps .step-img {
   display: inline-block;
   border-radius: 50%;
@@ -294,6 +299,10 @@ span.bold {
 .steps .step-text span.small {
   font-family: 'Manrope-Light', sans-serif;
   margin-top: 10px;
+}
+.steps .step-aminate {
+  opacity: 1;
+  transform: translateY(0px);
 }
 .feedback__top {
   min-height: 500px;
@@ -688,6 +697,17 @@ span.bold {
   }
   .header__buttons .main-btn {
     height: 40px;
+  }
+  @keyframes phoneAnimate {
+    0% {
+      transform: translateX(50%) translateY(-50%) rotate(10deg);
+    }
+    50% {
+      transform: translateX(50%) translateY(-50%) rotate(-10deg);
+    }
+    100% {
+      transform: translateX(50%) translateY(-50%) rotate(0deg);
+    }
   }
   .main {
     background: url(../img/mainbg.png) no-repeat center;
