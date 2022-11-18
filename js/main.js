@@ -75,13 +75,13 @@ function Animate() {
     };
     const tariffItem = document.querySelectorAll('.tariff__item');
     const tariffItemHeight = tariffItem[0].offsetHeight;
-    if(document.body.scrollTop > tariffRes || document.documentElement.scrollTop > tariffRes) {
+    if(document.body.scrollTop > tariffPos || document.documentElement.scrollTop > tariffPos) {
         tariffItem[1].classList.add('tariff__item-show');
     };
-    if(document.body.scrollTop > tariffRes + tariffItemHeight || document.documentElement.scrollTop > tariffRes + tariffItemHeight) {
+    if(document.body.scrollTop > tariffPos + tariffItemHeight / 2 || document.documentElement.scrollTop > tariffPos + tariffItemHeight / 2) {
         tariffItem[0].classList.add('tariff__item-show');
     };
-    if(document.body.scrollTop > tariffRes + tariffItemHeight * 2 || document.documentElement.scrollTop > tariffRes + tariffItemHeight * 2) {
+    if(document.body.scrollTop > tariffPos + tariffItemHeight || document.documentElement.scrollTop > tariffPos + tariffItemHeight) {
         tariffItem[2].classList.add('tariff__item-show');
     };
 }
