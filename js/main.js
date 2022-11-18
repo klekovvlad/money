@@ -39,7 +39,6 @@ const questionClose = document.querySelectorAll('.faq__close');
 
 question.forEach(function(questionItem, index) {
     questionItem.addEventListener('click', () => {
-        questionItem.classList.toggle('faq__question-show');
         answer[index].classList.toggle('faq__answer-show');
         questionClose[index].classList.toggle('faq__close-show');
     })

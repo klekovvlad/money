@@ -67,7 +67,7 @@ a {
 h3 {
   font-size: 2.8em;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 h4 {
   font-size: 1.25em;
@@ -76,7 +76,7 @@ h4 {
 }
 span.bold {
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   color: #5732C6;
 }
 .header {
@@ -98,7 +98,7 @@ span.bold {
 }
 .header__logo h4 {
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   color: #fff;
   font-size: 1.5em;
@@ -235,7 +235,7 @@ span.bold {
   font-size: 3.2em;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 .main__text h2 {
   color: #fff;
@@ -264,7 +264,7 @@ span.bold {
 .main__sale span.timer-min,
 .main__sale span.timer-sec {
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   width: 50px;
 }
 .main__sale-button {
@@ -323,7 +323,7 @@ span.bold {
   font-size: 1.75em;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 .steps .step-text span.small {
   font-family: 'Manrope-Light', sans-serif;
@@ -348,7 +348,7 @@ span.bold {
   text-align: center;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
   top: 60px;
 }
@@ -408,7 +408,7 @@ span.bold {
   text-align: center;
   font-size: 1.125em;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 .tariff {
   padding: 100px 0px;
@@ -437,7 +437,7 @@ span.bold {
   text-transform: uppercase;
   font-size: 1.75em;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 .tariff__item span.price {
   font-size: 2.5em;
@@ -464,7 +464,7 @@ span.bold {
   color: #fff;
   text-transform: uppercase;
   font-family: 'Manrope-Bold', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   top: 25px;
   right: 10px;
   transform: rotate(90deg);
@@ -486,19 +486,17 @@ span.bold {
   text-align: center;
   margin-bottom: 50px;
 }
-.faq__question {
-  padding: 30px 50px;
+.faq__item {
   border-radius: 30px;
   box-shadow: 4px 4px 20px rgba(30, 38, 109, 0.2), -4px -4px 20px rgba(30, 38, 109, 0.2);
+}
+.faq__question {
+  padding: 30px 50px;
   font-size: 1.5em;
   cursor: pointer;
   position: relative;
   margin-top: 30px;
   transition: 0.5s all linear;
-}
-.faq__question-show {
-  border-radius: 30px 30px 0px 0px;
-  box-shadow: 4px 0px 20px rgba(30, 38, 109, 0.2), -4px -4px 20px rgba(30, 38, 109, 0.2);
 }
 .faq__close {
   width: 40px;
@@ -533,8 +531,6 @@ span.bold {
 .faq__answer {
   font-size: 1em;
   padding: 0px 50px;
-  border-radius: 0px 0px 30px 30px;
-  box-shadow: 4px 4px 20px rgba(30, 38, 109, 0.2), -4px 0px 20px rgba(30, 38, 109, 0.2);
   visibility: hidden;
   transition: 0.5s;
   transform: scaleY(1);
@@ -542,12 +538,11 @@ span.bold {
   opacity: 0;
 }
 .faq__answer-show {
-  padding: 30px 50px;
+  padding: 0px 50px 30px 50px;
   height: 100%;
   transform: none;
   visibility: visible;
   opacity: 1;
-  box-shadow: 4px 4px 20px rgba(30, 38, 109, 0.2), -4px 0px 20px rgba(30, 38, 109, 0.2);
 }
 .footer {
   background: #1E266D;
@@ -594,7 +589,7 @@ span.bold {
   h3 {
     font-size: 2.8em;
     font-family: 'Manrope-Bold', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
   }
   h4 {
     font-size: 1.25em;
@@ -603,7 +598,7 @@ span.bold {
   }
   span.bold {
     font-family: 'Manrope-Bold', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     color: #5732C6;
   }
   .header__logo h4 {
@@ -882,17 +877,17 @@ span.bold {
     width: 20px;
   }
   .faq__close span:nth-child(1) {
-    transform: translateY(5px) rotate(-45deg);
+    transform: translateY(4.8px) rotate(-45deg);
   }
   .faq__close span:nth-child(2) {
-    transform: translateY(-5px) rotate(45deg);
+    transform: translateY(-4.8px) rotate(45deg);
   }
   .faq__answer {
     font-size: 0.875em;
     padding: 0px 30px;
   }
   .faq__answer-show {
-    padding: 30px 30px;
+    padding: 0px 30px 30px 30px;
   }
   .footer__wrapper {
     flex-direction: column;
