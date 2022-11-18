@@ -53,6 +53,8 @@ let p = 0;
 
 const tariff = document.querySelector('.tariff');
 let tariffPos = tariff.offsetTop;
+let tariffHeight = tarigg.offsetHeight;
+let tariffRes = tariffHeight - tariffPos;
 
 function Animate() {
     const stepItem = document.querySelectorAll('.step');
@@ -63,7 +65,7 @@ function Animate() {
     if(document.body.scrollTop > (stepsBlockRes + stepItemHeight)|| document.documentElement.scrollTop > (stepsBlockRes + stepItemHeight)) {
         stepItem[1].classList.add('step-aminate');
     };
-    if(document.body.scrollTop > (stepsBlockRes + stepItemHeight*2)|| document.documentElement.scrollTop > (stepsBlockRes + stepItemHeight*2)) {
+    if(document.body.scrollTop > (stepsBlockRes + stepItemHeight * 2)|| document.documentElement.scrollTop > (stepsBlockRes + stepItemHeight * 2)) {
         stepItem[2].classList.add('step-aminate');
     };
     let feedback = document.querySelector('.feedback');
@@ -73,13 +75,13 @@ function Animate() {
     };
     const tariffItem = document.querySelectorAll('.tariff__item');
     const tariffItemHeight = tariffItem[0].offsetHeight;
-    if(document.body.scrollTop > tariffPos - tariffItemHeight * 2 || document.documentElement.scrollTop > tariffPos - tariffItemHeight * 2) {
+    if(document.body.scrollTop > tariffRes || document.documentElement.scrollTop > tariffRes) {
         tariffItem[1].classList.add('tariff__item-show');
     };
-    if(document.body.scrollTop > tariffPos - tariffItemHeight / 2 || document.documentElement.scrollTop > tariffPos - tariffItemHeight / 2) {
+    if(document.body.scrollTop > tariffRes + tariffItemHeight || document.documentElement.scrollTop > tariffRes + tariffItemHeight) {
         tariffItem[0].classList.add('tariff__item-show');
     };
-    if(document.body.scrollTop > tariffPos || document.documentElement.scrollTop > tariffPos) {
+    if(document.body.scrollTop > tariffRes + tariffItemHeight * 2 || document.documentElement.scrollTop > tariffRes + tariffItemHeight * 2) {
         tariffItem[2].classList.add('tariff__item-show');
     };
 }

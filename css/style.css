@@ -415,6 +415,7 @@ span.bold {
 }
 .tariff {
   padding: 100px 0px;
+  overflow: hidden;
 }
 .tariff h3 {
   text-align: center;
